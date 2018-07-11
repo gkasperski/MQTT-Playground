@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.radio {
+    margin-top: 10px;
+}
+
+#custom_payload {
+    display: none;
+}
+
+#response {
+  overflow-y: scroll;
+  max-height: 6em;
+}

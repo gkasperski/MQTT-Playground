@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MQTT Test</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper indigo">
+        <a href="#!" class="brand-logo center">MQTT Web Client</a>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="row">
+      <form class="col s12">
+        <div class="row radio">
+          <div class="col s3">
+            <label>
+              <input value="gps" name="payload_type" type="radio" checked />
+              <span>GPS</span>
+            </label>
+          </div>
+          <div class="col s3">
+            <label>
+              <input value="custom" name="payload_type" type="radio" />
+              <span>Custom payload</span>
+            </label>
+          </div>
+        </div>
+        <div class="row" id="coords_payload">
+          <div class="input-field col s6">
+            <input placeholder="12.345678" id="latitude" type="text" type="number">
+            <label for="latitude">Latitude (X coordinate)</label>
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="12.345678" id="longitude" type="text" type="number">
+            <label for="longitude">Longitude (Y coordinate)</label>
+          </div>
+        </div>
+        <div class="row" id="custom_payload">
+          <div class="input-field col s12">
+            <textarea id="custom" class="materialize-textarea" placeholder="Some data in some format"></textarea>
+            <label for="custom">Custom payload</label>
+          </div>
+        </div>
+        <button class="btn waves-effect waves-light indigo" type="submit" name="action">Send
+          <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
+  </main>
+  <footer class="page-footer indigo">
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12">
+          <h5 class="white-text">Output:</h5>
+          <p class="grey-text text-lighten-4" id="response"></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2018 HTTP / MQTT
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
